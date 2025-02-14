@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+        .header .header-banner img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+
+        main {
+            margin: 20px;
+        }
+        h1 {
+            color: red;
+        }
+
+        h2 {
+            color: black;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, select, input, textarea, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #5cb85c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .delete-button {
+            background-color: #d9534f;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .delete-button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+    </header>
+    <main>
+        
+        <h2>Upload File</h2>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <label for="folder">Folder:</label>
+            <select name="folder" id="folder">
+                <option value="citizenship">Citizenship</option>
+                <option value="financial_reports">Financial Reports</option>
+                <option value="birth_certificates">Birth Certificates</option>
+                <option value="government_orders">Government Orders</option>
+                <option value="contracts_agreements">Contracts Agreements</option>
+                <option value="crime_reports">Crime Reports</option>
+                <option value="visa_work">Visa Work</option>
+                <option value="deportation_blacklist">Deportation Blacklist</option>
+            </select>
+            <label for="file">File:</label>
+            <input type="file" name="file" id="file">
+            <button type="submit">Upload</button>
+        </form>
+
+        <h2>Edit File</h2>
+        <form action="{{ url_for('edit_file') }}" method="post">
+            <label for="edit_folder">Folder:</label>
+            <select name="folder" id="edit_folder" onchange="updateFileList()">
+                <option value="citizenship">Citizenship</option>
+                <option value="financial_reports">Financial Reports</option>
+                <option value="birth_certificates">Birth Certificates</option>
+                <option value="government_orders">Government Orders</option>
+                <option value="contracts_agreements">Contracts Agreements</option>
+                <option value="crime_reports">Crime Reports</option>
+                <option value="visa_work">Visa Work</option>
+                <option value="deportation_blacklist">Deportation Blacklist</option>
+            </select>
+            <label for="file_name">File Name:</label>
+            <select name="file_name" id="edit_file_name">
+                <!-- File options will be populated by JavaScript -->
+            </select>
+            <label for="new_file_name">New File Name:</label>
+            <input type="text" name="new_file_name" id="new_file_name">
+            <button type="submit">Edit</button>
+        </form>
+
+        <h2>Files</h2>
+        <form>
+            <label for="service">Select Service:</label>
+            <select name="service" id="service" onchange="showFiles()">
+                <option value="citizenship">Citizenship</option>
+                <option value="financial_reports">Financial Reports</option>
+                <option value="birth_certificates">Birth Certificates</option>
+                <option value="government_orders">Government Orders</option>
+                <option value="contracts_agreements">Contracts Agreements</option>
+                <option value="crime_reports">Crime Reports</option>
+                <option value="visa_work">Visa Work</option>
+                <option value="deportation_blacklist">Deportation Blacklist</option>
+            </select>
+        </form>
+
+        <div id="files-container">
+            <div id="citizenship-files" class="files-section">
+                <h3>Citizenship</h3>
+                <ul>
+                    {% for file in citizenship_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='citizenship', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='citizenship', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="financial_reports-files" class="files-section" style="display:none;">
+                <h3>Financial Reports</h3>
+                <ul>
+                    {% for file in financial_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='financial_reports', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='financial_reports', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="birth_certificates-files" class="files-section" style="display:none;">
+                <h3>Birth Certificates</h3>
+                <ul>
+                    {% for file in photo_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='photos', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='photos', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="government_orders-files" class="files-section" style="display:none;">
+                <h3>Government Orders</h3>
+                <ul>
+                    {% for file in government_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='government_orders', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='government_orders', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="contracts_agreements-files" class="files-section" style="display:none;">
+                <h3>Contracts Agreements</h3>
+                <ul>
+                    {% for file in contracts_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='contracts_agreements', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='contracts_agreements', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="crime_reports-files" class="files-section" style="display:none;">
+                <h3>Crime Reports</h3>
+                <ul>
+                    {% for file in crime_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='crime_reports', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='crime_reports', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="visa_work-files" class="files-section" style="display:none;">
+                <h3>Visa Work</h3>
+                <ul>
+                    {% for file in visa_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='visa_work', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='visa_work', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="deportation_blacklist-files" class="files-section" style="display:none;">
+                <h3>Deportation Blacklist</h3>
+                <ul>
+                    {% for file in deportation_files %}
+                        <li>
+                            {{ file }}
+                            <a href="{{ url_for('download_file', folder='deportation_blacklist', filename=file) }}">Download</a>
+                            <form action="{{ url_for('delete_file', folder='deportation_blacklist', filename=file) }}" method="post" style="display:inline;">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showFiles() {
+            const selectedService = document.getElementById('service').value;
+            document.querySelectorAll('.files-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(`${selectedService}-files`).style.display = 'block';
+        }
+
+        function updateFileList() {
+            const folder = document.getElementById('edit_folder').value;
+            const fileSelect = document.getElementById('edit_file_name');
+            fileSelect.innerHTML = ''; // Clear the current options
+
+            fetch(`/files/${folder}`)
+                .then(response => response.json())
+                .then(files => {
+                    files.forEach(file => {
+                        const option = document.createElement('option');
+                        option.value = file;
+                        option.textContent = file;
+                        fileSelect.appendChild(option);
+                    });
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showFiles(); // Show initial files based on the default selection
+            updateFileList(); // Populate the file list for the default selection
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ministry of Home Affairs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap');
+
+        body {
+            font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 80px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #dc3545;
+            margin: 5px 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0056b3;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00408b;
+        }
+
+        .message {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://moha.gov.np/static/nepal-government.png" alt="Nepal Government Emblem">
+        <h1>नेपाल सरकार <br> गृह मन्त्रालय</h1>
+    </div>
+
+    <div class="login-container">
+        <h2>प्रवेश गर्नुहोस् (Login)</h2>
+        <form action="{{ url_for('login') }}" method="post">
+            <input type="text" name="username" placeholder="प्रयोगकर्ता नाम (Username)" required>
+            <input type="password" name="password" placeholder="पासवर्ड (Password)" required>
+            <input type="submit" value="प्रवेश (Login)">
+        </form>
+
+        {% if messages %}
+            <div class="message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

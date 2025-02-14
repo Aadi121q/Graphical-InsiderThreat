@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Activity Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+        main {
+            padding: 1rem;
+            text-align: center;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Activity Dashboard</h1>
+    </header>
+    <main>
+        <h2>File Transfer Graph</h2>
+        <img src="{{ url_for('file_transfer_graph') }}" alt="File Transfer Graph">
+        <h2>Login Activity Graph</h2>
+        <img src="{{ url_for('login_activity_graph') }}" alt="Login Activity Graph">
+        <h2>User Login Times</h2>
+        <img src="{{ url_for('user_login_times') }}" alt="User Login Times">
+        <h2>File Upload Times</h2>
+        <img src="{{ url_for('file_upload_times') }}" alt="File Upload Times">
+        <h2>File Upload Volumes</h2>
+        <img src="{{ url_for('file_upload_volumes') }}" alt="File Upload Volumes">
+        <h2>File Delete Times</h2>
+        <img src="{{ url_for('file_delete_times') }}" alt="File Delete Times">
+    </main>
+</body>
+</html>

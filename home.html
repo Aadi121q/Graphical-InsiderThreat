@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoHA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #003366;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .header-banner {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .header-banner img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .navbar .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar .gov-text {
+            color: red;
+            font-size: 20px;
+        }
+
+        .navbar .title {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header img {
+            width: 1000px;
+            height: 500px;
+            border-radius: 10px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .service {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .services .service a {
+    text-decoration: none; /* Remove default underline */
+    color: black; /* Ensure text is visible */
+}
+
+.services .service a:hover p {
+    text-decoration: underline; /* Underline only on hover */
+}
+
+        .service img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+        }
+
+        .footer h3 {
+            border-bottom: 2px solid gray;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .footer p, .footer a {
+            color: white;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration:  thistle;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <!-- Ministry of Home Affairs Header with Logo -->
+        <div class="header-banner">
+            <img src="https://moha.gov.np/static/nepal-government.png" alt="Government Logo">
+            <div class="text-container">
+                <div class="gov-text"><strong>Nepal Government</strong></div>
+                <h1 class="title">Ministry of Home Affairs</h1>
+            </div>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+            <a href="login">Login</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Kathmandu-35.JPG" alt="Header Image">
+        <p>
+        </p>
+    </div>
+    <div class="services">
+        <div class="service">
+            <a href="citizenship">
+                <img src="https://lawneeti.com/storage/273/conversions/NRN-Citizenship-in-Nepal-medium.webp" alt="Folder">
+                <p><strong>Citizenship</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="financial_reports">
+                <img src="https://cdn.create.vista.com/api/media/medium/746408478/stock-photo-elegant-office-young-bald-woman-analyzes-reports-surrounded-charts-papers?token=" alt="Folder">
+                <p><strong>Financial Reports</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="birth_certificates">
+                <img src="https://imgs.search.brave.com/C8a3JQGYJwjIpnwqUyfc4SqUAAx66wLWommb7wBbAv0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2NhL1VLX0FybWVk/X0ZvcmNlc19CaXJ0/aF9DZXJ0aWZpY2F0/ZV9JSUkuanBn" alt="Folder">
+                <p><strong>Birth Certificates</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="government_orders">
+                <img src="https://imgs.search.brave.com/XRAaOy43BdVqqb0YBCuKjxycefvahARFsV2Uhukdym0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmluY2VuLmdvdi9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3NoYXJl/ZC9CT0ktcmVmZXJl/bmNlLWd1aWRlLWlj/b24ucG5n" alt="Folder">
+                <p><strong>Government Orders & Reports</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="contracts_agreements">
+                <img src="https://imgs.search.brave.com/ANmh4MTjLtmU5uFQlC-kIrZOll1nMQQeioVDaxVNWA4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ueXNi/ZGMub3JnL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzEwLzIw/NDk1LTU0MHg1NDAu/anBn" alt="Folder">
+                <p><strong>Contracts and Agreements</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="crime_reports">
+                <img src="https://imgs.search.brave.com/8-5rt9OrzfCdh3MfUkIIjOHAEAb7eA59LBfBAohNk04/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmJpLmdvdi8rK3Ro/ZW1lKytmYmlnb3Yu/dGhlbWUvaW1hZ2Vz/L2ZiaV9zZWFsX25l/dy5wbmc" alt="Folder">
+                <p><strong>Crime and Investigation Reports</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="visa_work">
+                <img src="https://imgs.search.brave.com/VbtB6deGG8N61KMnVmGPcSVdwLEkfnmu4coeq2ZV9fI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sYXdu/ZWV0aS5jb20vc3Rv/cmFnZS80NjQvY29u/dmVyc2lvbnMvMmZk/aS1pY29uLndlYnA" alt="Folder">
+                <p><strong>Visa & Work Permit Applications</strong></p>
+            </a>
+        </div>
+        <div class="service">
+            <a href="deportation_blacklist">
+                <img src="https://imgs.search.brave.com/zGqa1fH_I6WB2jeUsNXudJNO1E9HKOrhxqACC4Fvk8U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZXhwYXRpbmRvLm9y/Zy93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ny8wMS9EZXBvcnRh/dGlvbl9zdGFtcC5w/bmc" alt="Folder">
+                <p><strong>Deportation & Blacklist Records</strong></p>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-column">
+            <h3>सम्पर्क</h3>
+            <p><strong>गृह मन्त्रालय</strong></p>
+            <p>सिंहदरबार, काठमाडौं</p>
+            <p>📞 +९७७-१-४२११२१८, +९७७-१-४२११३१४</p>
+            <p>✉️ control@moha.gov.np</p>
+            <p>✉️ gunaso@moha.gov.np</p>
+            <div class="social-icons">
+                <img src="https://imgs.search.brave.com/K5_pyQLpVtlcymeD8Q-qIaAxBeDS2CYiTsC0nywbHng/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9iL2I5LzIw/MjNfRmFjZWJvb2tf/aWNvbi5zdmcvMjIw/cHgtMjAyM19GYWNl/Ym9va19pY29uLnN2/Zy5wbmc" alt="Facebook">
+                <img src="https://imgs.search.brave.com/nKd3NFbMdj8R87z1rQjwbeGkkfHxaNJhSGoBC4IWSso/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZW5q/aS5jby93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMy8wNy9YLWxv/Z28tdHdpdHRlci0x/MDI0eDU3NC5qcGc" alt="Twitter">
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>महत्वपूर्ण लिंकहरू</h3>
+            <p><a href="#">नेपाल हज समितिको सचिवालय</a></p>
+            <p><a href="#">कसुरजन्य सम्पत्ति व्यवस्थापन विभाग</a></p>
+            <p><a href="#">नेपाल प्रहरी</a></p>
+            <p><a href="#">सशस्त्र प्रहरी बल, नेपाल</a></p>
+            <p><a href="#">नेपाल विपद व्यवस्थापन पोर्टल</a></p>
+            <p><a href="#">राष्ट्रिय आपतकालीन कार्य सञ्चालन केन्द्र</a></p>
+        </div>
+
+        <div class="footer-column">
+            <h3>कार्यलय समय</h3>
+            <p>10:00 AM - 5:00 PM (Sunday to Thursday)</p>
+            <p>10:00 AM - 3:00 PM (Friday)</p>
+        </div>
+    </div>
+
+</body>
+</html>

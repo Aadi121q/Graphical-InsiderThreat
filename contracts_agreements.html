@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contracts & Agreements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            position: relative
+        }
+        .logo {
+            height: 80px;
+            width: 110px;
+            flex: 0 0 auto
+        }
+        .title {
+            flex: 1;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            font-size: 24px
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            list-style-type: none;
+            padding: 0.
+        }
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px
+        }
+        a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: #333
+        }
+        a:hover {
+            text-decoration: underline
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="https://moha.gov.np/static/nepal-government.png" alt="Logo" class="logo">
+        </nav>
+    </header>
+    <main>
+        <ul class="grid-container">
+            {% for file in contracts_files %}
+                <li class="grid-item">
+                    {% if file.endswith('.png') or file.endswith('.jpg') or file.endswith('.jpeg') or file.endswith('.webp') %}
+                        <img src="{{ url_for('static', filename='icons/image-icon.png') }}" class="icon" alt="Image Icon">
+                    {% elif file.endswith('.docx') or file.endswith('.txt') %}
+                        <img src="{{ url_for('static', filename='icons/doc-icon.png') }}" class="icon" alt="Doc Icon">
+                    {% elif file.endswith('.pdf') %}
+                        <img src="{{ url_for('static', filename='icons/pdf-icon.png') }}" class="icon" alt="PDF Icon">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='icons/file-icon.png') }}" class="icon" alt="File Icon">
+                    {% endif %}
+                    <a href="{{ url_for('download_file', folder='contracts_agreements', filename=file) }}" target="_blank">{{ file }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

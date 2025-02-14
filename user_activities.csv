@@ -1,0 +1,146 @@
+1,aadi,File Downloaded,02/01,09:15,"citizenship: document1.pdf, Size: 50234 bytes"
+1,aadi,Login,02/01,09:20,User logged in: aadi
+1,aadi,File Uploaded to S3,02/01,09:25,"contracts_agreements: contract1.docx, Size: 15234 bytes"
+1,aadi,File Uploaded,02/01,09:30,"contracts_agreements: contract1.docx, Size: 15234 bytes"
+1,aadi,File Renamed,02/01,09:45,birth_certificates: cert1.jpg -> cert1.pdf
+1,aadi,File Downloaded,02/01,10:00,"crime_reports: report1.pdf, Size: 67234 bytes"
+1,aadi,File Deleted,02/01,10:20,citizenship: document1.pdf
+1,aadi,File Uploaded to S3,02/01,11:30,"citizenship: approval1.pdf, Size: 118000 bytes"
+1,aadi,File Uploaded,02/01,11:35,"citizenship: approval1.pdf, Size: 118000 bytes"
+2,bob,Login,02/01,12:00,User logged in: bob
+2,bob,File Downloaded,02/01,08:00,"financial_reports: report2.pdf, Size: 20234 bytes"
+2,bob,File Uploaded,02/01,08:30,"financial_reports: report2.pdf, Size: 20234 bytes"
+2,bob,File Deleted,02/01,09:00,financial_reports: report2.pdf
+3,carol,File Downloaded,02/01,10:00,"government_orders: order1.pdf, Size: 50034 bytes"
+3,carol,File Uploaded to S3,02/01,10:30,"government_orders: order1.pdf, Size: 50034 bytes"
+3,carol,File Uploaded,02/01,10:35,"government_orders: order1.pdf, Size: 50034 bytes"
+3,carol,File Renamed,02/01,10:50,government_orders: order1.pdf -> order2.pdf
+3,carol,File Downloaded,02/01,11:00,"contracts_agreements: contract2.docx, Size: 15234 bytes"
+2,bob,File Downloaded,02/01,13:00,"financial_reports: report3.pdf, Size: 30234 bytes"
+2,bob,File Deleted,02/01,13:30,financial_reports: report3.pdf
+4,dave,File Downloaded,02/01,09:15,"citizenship: document2.pdf, Size: 50234 bytes"
+4,dave,Login,02/01,09:20,User logged in: dave
+4,dave,File Uploaded to S3,02/01,09:25,"contracts_agreements: contract3.docx, Size: 15234 bytes"
+4,dave,File Uploaded,02/01,09:30,"contracts_agreements: contract3.docx, Size: 15234 bytes"
+4,dave,File Renamed,02/01,09:45,birth_certificates: cert2.jpg -> cert2.pdf
+4,dave,File Downloaded,02/01,10:00,"crime_reports: report2.pdf, Size: 67234 bytes"
+4,dave,File Deleted,02/01,10:20,citizenship: document2.pdf
+4,dave,File Uploaded to S3,02/01,11:30,"citizenship: approval2.pdf, Size: 118000 bytes"
+4,dave,File Uploaded,02/01,11:35,"citizenship: approval2.pdf, Size: 118000 bytes"
+5,emma,Login,02/01,12:00,User logged in: emma
+5,emma,File Downloaded,02/01,08:00,"financial_reports: report4.pdf, Size: 20234 bytes"
+5,emma,File Uploaded,02/01,08:30,"financial_reports: report4.pdf, Size: 20234 bytes"
+5,emma,File Deleted,02/01,09:00,financial_reports: report4.pdf
+6,frank,File Downloaded,02/01,10:00,"government_orders: order2.pdf, Size: 50034 bytes"
+6,frank,File Uploaded to S3,02/01,10:30,"government_orders: order2.pdf, Size: 50034 bytes"
+6,frank,File Uploaded,02/01,10:35,"government_orders: order2.pdf, Size: 50034 bytes"
+6,frank,File Renamed,02/01,10:50,government_orders: order2.pdf -> order3.pdf
+6,hannah,File Downloaded,02/02,11:00,"contracts_agreements: contract4.docx, Size: 15234 bytes"
+5,emma,File Downloaded,02/02,13:00,"financial_reports: report5.pdf, Size: 30234 bytes"
+5,emma,File Deleted,02/02,13:30,financial_reports: report5.pdf
+4,dave,File Downloaded,02/03,09:15,"citizenship: document3.pdf, Size: 50234 bytes"
+4,dave,Login,02/03,09:20,User logged in: dave
+4,dave,File Uploaded to S3,02/03,09:25,"contracts_agreements: contract5.docx, Size: 15234 bytes"
+4,dave,File Uploaded,02/03,09:30,"contracts_agreements: contract5.docx, Size: 15234 bytes"
+4,dave,File Renamed,02/03,09:45,birth_certificates: cert3.jpg -> cert3.pdf
+4,dave,File Downloaded,02/03,10:00,"crime_reports: report3.pdf, Size: 67234 bytes"
+4,dave,File Deleted,02/03,10:20,citizenship: document3.pdf
+4,dave,File Uploaded to S3,02/03,11:30,"citizenship: approval3.pdf, Size: 118000 bytes"
+4,dave,File Uploaded,02/03,11:35,"citizenship: approval3.pdf, Size: 118000 bytes"
+5,emma,Login,02/03,12:00,User logged in: emma
+5,emma,File Downloaded,02/03,08:00,"financial_reports: report6.pdf, Size: 20234 bytes"
+5,emma,File Uploaded,02/03,08:30,"financial_reports: report6.pdf, Size: 20234 bytes"
+5,emma,File Deleted,02/03,09:00,financial_reports: report6.pdf
+6,frank,File Downloaded,02/03,10:00,"government_orders: order3.pdf, Size: 50034 bytes"
+6,frank,File Uploaded to S3,02/03,10:30,"government_orders: order3.pdf, Size: 50034 bytes"
+6,frank,File Uploaded,02/03,10:35,"government_orders: order3.pdf, Size: 50034 bytes"
+6,frank,File Renamed,02/03,10:50,government_orders: order3.pdf -> order4.pdf
+6,hannah,File Downloaded,02/04,11:00,"contracts_agreements: contract6.docx, Size: 15234 bytes"
+5,emma,File Downloaded,02/04,13:00,"financial_reports: report7.pdf, Size: 30234 bytes"
+5,emma,File Deleted,02/04,13:30,financial_reports: report7.pdf
+7,jack,File Downloaded,02/04,09:15,"citizenship: document4.pdf, Size: 50234 bytes"
+7,jack,Login,02/04,09:20,User logged in: jack
+7,jack,File Uploaded to S3,02/04,09:25,"contracts_agreements: contract7.docx, Size: 15234 bytes"
+7,jack,File Uploaded,02/04,09:30,"contracts_agreements: contract7.docx, Size: 15234 bytes"
+7,jack,File Renamed,02/04,09:45,birth_certificates: cert4.jpg -> cert4.pdf
+7,jack,File Downloaded,02/04,10:00,"crime_reports: report4.pdf, Size: 67234 bytes"
+7,jack,File Deleted,02/04,10:20,citizenship: document4.pdf
+7,jack,File Uploaded to S3,02/04,11:30,"citizenship: approval4.pdf, Size: 118000 bytes"
+7,jack,File Uploaded,02/04,11:35,"citizenship: approval4.pdf, Size: 118000 bytes"
+8,kate,Login,02/04,12:00,User logged in: kate
+8,kate,File Downloaded,02/05,08:00,"financial_reports: report8.pdf, Size: 20234 bytes"
+8,kate,File Uploaded,02/05,08:30,"financial_reports: report8.pdf, Size: 20234 bytes"
+8,kate,File Deleted,02/05,09:00,financial_reports: report8.pdf
+9,lucas,File Downloaded,02/05,10:00,"government_orders: order4.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded to S3,02/05,10:30,"government_orders: order4.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded,02/05,10:35,"government_orders: order4.pdf, Size: 50034 bytes"
+9,lucas,File Renamed,02/05,10:50,government_orders: order4.pdf -> order5.pdf
+9,lucas,File Downloaded,02/06,11:00,"contracts_agreements: contract8.docx, Size: 15234 bytes"
+8,kate,File Downloaded,02/06,13:00,"financial_reports: report9.pdf, Size: 30234 bytes"
+8,kate,File Deleted,02/06,13:30,financial_reports: report9.pdf
+7,jack,File Downloaded,02/06,09:15,"citizenship: document5.pdf, Size: 50234 bytes"
+7,jack,Login,02/06,09:20,User logged in: jack
+7,jack,File Uploaded to S3,02/06,09:25,"contracts_agreements: contract9.docx, Size: 15234 bytes"
+7,jack,File Uploaded,02/06,09:30,"contracts_agreements: contract9.docx, Size: 15234 bytes"
+7,jack,File Renamed,02/06,09:45,birth_certificates: cert5.jpg -> cert5.pdf
+7,jack,File Downloaded,02/06,10:00,"crime_reports: report5.pdf, Size: 67234 bytes"
+7,jack,File Deleted,02/06,10:20,citizenship: document5.pdf
+7,jack,File Uploaded to S3,02/06,11:30,"citizenship: approval5.pdf, Size: 118000 bytes"
+7,jack,File Uploaded,02/06,11:35,"citizenship: approval5.pdf, Size: 118000 bytes"
+10,laura,Login,02/06,12:00,User logged in: laura
+10,laura,File Downloaded,02/07,08:00,"financial_reports: report10.pdf, Size: 20234 bytes"
+10,laura,File Uploaded,02/07,08:30,"financial_reports: report10.pdf, Size: 20234 bytes"
+10,laura,File Deleted,02/07,09:00,financial_reports: report10.pdf
+9,lucas,File Downloaded,02/07,10:00,"government_orders: order5.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded to S3,02/07,10:30,"government_orders: order5.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded,02/07,10:35,"government_orders: order5.pdf, Size: 50034 bytes"
+9,lucas,File Renamed,02/07,10:50,government_orders: order5.pdf -> order6.pdf
+9,lucas,File Downloaded,02/08,11:00,"contracts_agreements: contract10.docx, Size: 15234 bytes"
+10,laura,File Downloaded,02/08,13:00,"financial_reports: report11.pdf, Size: 30234 bytes"
+10,laura,File Deleted,02/08,13:30,financial_reports: report11.pdf
+8,kate,File Downloaded,02/09,09:15,"citizenship: document6.pdf, Size: 50234 bytes"
+8,kate,Login,02/09,09:20,User logged in: kate
+8,kate,File Uploaded to S3,02/09,09:25,"contracts_agreements: contract11.docx, Size: 15234 bytes"
+8,kate,File Uploaded,02/09,09:30,"contracts_agreements: contract11.docx, Size: 15234 bytes"
+8,kate,File Renamed,02/09,09:45,birth_certificates: cert6.jpg -> cert6.pdf
+8,kate,File Downloaded,02/09,10:00,"crime_reports: report6.pdf, Size: 67234 bytes"
+8,kate,File Deleted,02/09,10:20,citizenship: document6.pdf
+8,kate,File Uploaded to S3,02/09,11:30,"citizenship: approval6.pdf, Size: 118000 bytes"
+8,kate,File Uploaded,02/09,11:35,"citizenship: approval6.pdf, Size: 118000 bytes"
+10,laura,Login,02/09,12:00,User logged in: laura
+10,laura,File Downloaded,02/10,08:00,"financial_reports: report12.pdf, Size: 20234 bytes"
+10,laura,File Uploaded,02/10,08:30,"financial_reports: report12.pdf, Size: 20234 bytes"
+10,laura,File Deleted,02/10,09:00,financial_reports: report12.pdf
+9,lucas,File Downloaded,02/10,10:00,"government_orders: order6.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded to S3,02/10,10:30,"government_orders: order6.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded,02/10,10:35,"government_orders: order6.pdf, Size: 50034 bytes"
+9,lucas,File Renamed,02/10,10:50,government_orders: order6.pdf -> order7.pdf
+9,lucas,File Downloaded,02/11,11:00,"contracts_agreements: contract12.docx, Size: 15234 bytes"
+10,laura,File Downloaded,02/11,13:00,"financial_reports: report13.pdf, Size: 30234 bytes"
+10,laura,File Deleted,02/11,13:30,financial_reports: report13.pdf
+9,lucas,File Downloaded,02/12,09:15,"citizenship: document7.pdf, Size: 50234 bytes"
+9,lucas,Login,02/12,09:20,User logged in: lucas
+9,lucas,File Uploaded to S3,02/12,09:25,"contracts_agreements: contract13.docx, Size: 15234 bytes"
+9,lucas,File Uploaded,02/12,09:30,"contracts_agreements: contract13.docx, Size: 15234 bytes"
+9,lucas,File Renamed,02/12,09:45,birth_certificates: cert7.jpg -> cert7.pdf
+9,lucas,File Downloaded,02/12,10:00,"crime_reports: report7.pdf, Size: 67234 bytes"
+9,lucas,File Deleted,02/12,10:20,citizenship: document7.pdf
+9,lucas,File Uploaded to S3,02/12,11:30,"citizenship: approval7.pdf, Size: 118000 bytes"
+9,lucas,File Uploaded,02/12,11:35,"citizenship: approval7.pdf, Size: 118000 bytes"
+10,laura,Login,02/12,12:00,User logged in: laura
+10,laura,File Downloaded,02/13,08:00,"financial_reports: report14.pdf, Size: 20234 bytes"
+10,laura,File Uploaded,02/13,08:30,"financial_reports: report14.pdf, Size: 20234 bytes"
+10,laura,File Deleted,02/13,09:00,financial_reports: report14.pdf
+9,lucas,File Downloaded,02/13,10:00,"government_orders: order7.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded to S3,02/13,10:30,"government_orders: order7.pdf, Size: 50034 bytes"
+9,lucas,File Uploaded,02/13,10:35,"government_orders: order7.pdf, Size: 50034 bytes"
+9,lucas,File Renamed,02/13,10:50,government_orders: order7.pdf -> order8.pdf
+9,lucas,File Downloaded,02/13,11:00,"contracts_agreements: contract14.docx, Size: 15234 bytes"
+10,laura,File Downloaded,02/13,13:00,"financial_reports: report15.pdf, Size: 30234 bytes"
+5,Salman,File Uploaded to S3,02/13 21:10,"crime_reports: login.png, Size: 25701 bytes"
+5,Salman,File Uploaded,02/13 21:10,"crime_reports: login.png, Size: 25701 bytes"
+5,Salman,File Renamed,02/13 21:10,crime_reports: login.png -> salman.pdf
+5,Salman,File Downloaded,02/13 21:11,"crime_reports: salman.pdf, Size: 25701 bytes"
+5,Salman,File Downloaded,02/13 21:11,"crime_reports: salman.pdf, Size: 25701 bytes"
+5,Salman,File Downloaded,02/13 21:11,"citizenship: Ethical-Approval-1.pdf, Size: 118377 bytes"
+5,Salman,File Deleted,02/13 21:12,crime_reports: salman.pdf
